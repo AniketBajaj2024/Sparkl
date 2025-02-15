@@ -6,6 +6,10 @@ const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
+const quizRoutes = require("./routes/quiz");
+const questionRoutes = require("./routes/questions");
+
+
 
 
 
@@ -21,6 +25,10 @@ app.use(bodyParser.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/quiz", quizRoutes);
+app.use("/api/question", questionRoutes);
+
+
 
 
 
