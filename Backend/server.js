@@ -8,6 +8,8 @@ const userRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
 const quizRoutes = require("./routes/quiz");
 const questionRoutes = require("./routes/questions");
+const attemptRoutes = require("./routes/attempt");
+
 
 
 
@@ -27,6 +29,8 @@ app.use("/api/user", userRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/quiz", quizRoutes);
 app.use("/api/question", questionRoutes);
+app.use("/api/attempt", attemptRoutes);
+
 
 
 

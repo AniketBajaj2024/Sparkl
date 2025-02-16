@@ -28,7 +28,7 @@ router.post("/create", verifyToken, adminOnly, (req, res) => {
 });
 
 // Get all quizzes (Admin Only)
-router.get("/list", verifyToken, adminOnly, (req, res) => {
+router.get("/list", verifyToken, (req, res) => {
     pool.query("SELECT * FROM quizzes", (err, results) => {
         if (err) {
             return res.status(500).json({ error: "Database error occurred!" });
